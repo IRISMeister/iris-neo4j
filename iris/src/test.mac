@@ -1,0 +1,8 @@
+ROUTINE test
+
+	Set p1="Kevin Bacon",p2="Meg Ryan"
+	W ##class(Demo.neo4j).Length(p1,p2)
+	Return
+
+t1	;
+	; MATCH p=shortestPath((bacon:Person {name:"Kevin Bacon"})-[*]-(meg:Person {name:"Meg Ryan"})) RETURN length(p)
